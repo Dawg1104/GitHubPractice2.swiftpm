@@ -3,19 +3,19 @@ import SwiftUI
 struct ContentView: View {
     @State var number1 = 0
     @State var number2: Int = 0
-    
+    @State var sign = "+"
     @State var answer = 0
     var body: some View {
         
         TextField("enter a number", value: $number1, format: .number)
             .textFieldStyle(.roundedBorder)
-        Text("+")
+        Text("\(sign)")
             .font(.title)
         TextField("", value: $number2, format: .number)
             .textFieldStyle(.roundedBorder)
         
         HStack {
-            Button(action: { answer = number1 + number2 }) {
+            Button(action: { answer = number1 + number2; sign = "+" }) {
                 ZStack{
                     RoundedRectangle(cornerRadius: 25)
                         .frame(width: 75, height: 25)
@@ -26,7 +26,7 @@ struct ContentView: View {
                 }
             }
             
-            Button(action: { answer = number1 - number2 }) {
+            Button(action: { answer = number1 - number2; sign = "-" }) {
                 ZStack{
                     RoundedRectangle(cornerRadius: 25)
                         .frame(width: 75, height: 25)
