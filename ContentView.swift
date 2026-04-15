@@ -6,7 +6,6 @@ struct ContentView: View {
     @State var sign = "+"
     @State var answer = 0
     var body: some View {
-        
         TextField("enter a number", value: $number1, format: .number)
             .textFieldStyle(.roundedBorder)
             .multilineTextAlignment(.center)
@@ -38,7 +37,7 @@ struct ContentView: View {
                         .bold()
                 }
             }
-            Button(action: { answer = number1 * number2 }) {
+            Button(action: { answer = number1 * number2; sign = "x" }) {
                 ZStack{
                     RoundedRectangle(cornerRadius: 25)
                         .frame(width: 75, height: 25)
@@ -48,7 +47,7 @@ struct ContentView: View {
                         .bold()
                 }
             }
-            Button(action: { answer = number1 / number2 }) {
+            Button(action: { answer = number1 / number2; sign = "÷" }) {
                 ZStack{
                     RoundedRectangle(cornerRadius: 25)
                         .frame(width: 75, height: 25)
