@@ -15,6 +15,14 @@ struct ContentView: View {
             .textFieldStyle(.roundedBorder)
             .multilineTextAlignment(.center)
         
+        
+        Text("=")
+            .font(.title)
+        Text("\(answer)")
+            .font(.largeTitle)
+            .padding()
+            .bold()
+        
         HStack {
             Button(action: { answer = number1 + number2; sign = "+" }) {
                 ZStack{
@@ -58,12 +66,6 @@ struct ContentView: View {
                 }
             }
         }
-        Text("=")
-            .font(.title)
-        Text("\(answer)")
-            .font(.largeTitle)
-            .padding()
-            .bold()
     }
 }
 
