@@ -8,11 +8,13 @@ struct ContentView: View {
     var body: some View {
         TextField("enter a number", value: $number1, format: .number)
             .textFieldStyle(.roundedBorder)
+            .font(.title)
             .multilineTextAlignment(.center)
         Text("\(sign)")
             .font(.title)
         TextField("", value: $number2, format: .number)
             .textFieldStyle(.roundedBorder)
+            .font(.title)
             .multilineTextAlignment(.center)
         
         
