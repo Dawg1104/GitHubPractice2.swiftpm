@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var number1 = 0
-    @State var number2: Int = 0
+    @State var number1: Double = 0
+    @State var number2: Double = 0
     @State var sign = "+"
-    @State var answer = 0
+    @State var answer = 0.0
     var body: some View {
         TextField("enter a number", value: $number1, format: .number)
             .textFieldStyle(.roundedBorder)
@@ -20,7 +20,7 @@ struct ContentView: View {
         
         Text("=")
             .font(.title)
-        Text("\(answer)")
+        Text("\(answer, specifier: "%.2f")")
             .font(.largeTitle)
             .padding()
             .bold()
