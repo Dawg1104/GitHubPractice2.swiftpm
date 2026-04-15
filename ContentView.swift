@@ -47,7 +47,7 @@ struct ContentView: View {
                         .bold()
                 }
             }
-            Button(action: { answer = number1 / number2; sign = "÷" }) {
+            Button(action: { if (number2 == 0) {sign = "÷"; return}; answer = number1 / number2; sign = "÷" }) {
                 ZStack{
                     RoundedRectangle(cornerRadius: 25)
                         .frame(width: 75, height: 25)
