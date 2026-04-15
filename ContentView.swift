@@ -9,10 +9,12 @@ struct ContentView: View {
         
         TextField("enter a number", value: $number1, format: .number)
             .textFieldStyle(.roundedBorder)
+            .multilineTextAlignment(.center)
         Text("\(sign)")
             .font(.title)
         TextField("", value: $number2, format: .number)
             .textFieldStyle(.roundedBorder)
+            .multilineTextAlignment(.center)
         
         HStack {
             Button(action: { answer = number1 + number2; sign = "+" }) {
