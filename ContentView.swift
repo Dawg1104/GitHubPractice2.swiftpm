@@ -9,5 +9,6 @@ struct ContentView: View {
             .textFieldStyle(.roundedBorder)
         
         
+        TextField("", value: $number2, format: .number)
     }
 }
