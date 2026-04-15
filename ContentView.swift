@@ -3,12 +3,15 @@ import SwiftUI
 struct ContentView: View {
     @State var number1 = 0
     @State var number2: Int = 0
+    
+    @State var answer = ""
     var body: some View {
         
         TextField("enter a number", value: $number1, format: .number)
             .textFieldStyle(.roundedBorder)
         
         TextField("", value: $number2, format: .number)
+            .textFieldStyle(.roundedBorder)
         
         Button(action: answer = number1 + number2) {
             ZStack{
@@ -21,5 +24,6 @@ struct ContentView: View {
                     .font(.largeTitle)
             }
         }
+        Text(answer)
     }
 }
