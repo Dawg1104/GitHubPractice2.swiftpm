@@ -36,6 +36,26 @@ struct ContentView: View {
                         .bold()
                 }
             }
+            Button(action: { answer = number1 * number2 }) {
+                ZStack{
+                    RoundedRectangle(cornerRadius: 25)
+                        .frame(width: 75, height: 25)
+                        .foregroundStyle(.blue)
+                    Text("Multiply")
+                        .foregroundStyle(.white)
+                        .bold()
+                }
+            }
+            Button(action: { answer = number1 / number2 }) {
+                ZStack{
+                    RoundedRectangle(cornerRadius: 25)
+                        .frame(width: 75, height: 25)
+                        .foregroundStyle(.blue)
+                    Text("Divide")
+                        .foregroundStyle(.white)
+                        .bold()
+                }
+            }
         }
         Text("=")
             .font(.title)
