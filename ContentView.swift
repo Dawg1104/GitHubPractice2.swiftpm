@@ -9,7 +9,8 @@ struct ContentView: View {
         
         TextField("enter a number", value: $number1, format: .number)
             .textFieldStyle(.roundedBorder)
-        
+        Text("+")
+            .font(.title)
         TextField("", value: $number2, format: .number)
             .textFieldStyle(.roundedBorder)
         
@@ -36,7 +37,12 @@ struct ContentView: View {
                 }
             }
         }
+        Text("=")
+            .font(.title)
         Text("\(answer)")
+            .font(.largeTitle)
+            .padding()
+            .bold()
     }
 }
 
